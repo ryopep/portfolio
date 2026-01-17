@@ -10,9 +10,9 @@ header nav {
   gap: 10%;
   align-items: center;
   width: 100%;
-  position:fixed;
-  left:0;
-  right:0;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 header a {
@@ -21,62 +21,62 @@ header a {
 }
 
 /* about */
-.about{
-  padding:80px 0 40px;
+.about {
+  padding: 80px 0 40px;
 }
 
-h2{
+h2 {
   text-align: center;
   font-weight: normal;
   padding-bottom: 40px;
 }
 
-.about img{
+.about img {
   width: 100%;
   object-fit: cover;
 }
 
-h1{
+h1 {
   text-align: center;
-  padding:40px 0;
+  padding: 40px 0;
 }
 
-p{
-  padding:0 20%;
-  margin-bottom:40px;
+p {
+  padding: 0 20%;
+  margin-bottom: 40px;
 }
 
-.article{
+.article {
   background: lightgray;
   max-width: 940px;
- margin: 0 auto;
- display: flex;
-  flex-direction: column; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  gap:20px;
+  gap: 20px;
 }
 
-.educational{
+.educational {
   padding-bottom: 40px;
 }
 
-.educational p{
-margin:0;
-text-decoration: underline;
+.educational p {
+  margin: 0;
+  text-decoration: underline;
 }
 
-.article div{
+.article div {
   background: white;
 }
 
-.article ul{
+.article ul {
   list-style: none;
-display: flex;
-gap:10%;
-justify-content: center; 
+  display: flex;
+  gap: 10%;
+  justify-content: center;
 }
 
-.article img{
+.article img {
   width: 100%;
   max-width: 150px;
   height: auto;
@@ -84,7 +84,7 @@ justify-content: center;
   border-radius: 50%;
 }
 
-.article p{
+.article p {
   text-align: center;
 }
 
@@ -110,4 +110,15 @@ small {
   padding-top: 20px;
   text-align: center;
   display: block;
+}
+
+@media (max-width:400px) {
+  .article ul {
+    flex-direction: column;
+  }
+
+  .article img {
+    display: block;
+    margin: 0 auto;
+  }
 }

@@ -7,16 +7,14 @@
 }
 
 header {
-  /* position: fixed; */
-  /* z-index: 10; */
   padding-top: 10px;
-  width:100%;
-  height:60px;
+  width: 100%;
+  height: 60px;
 }
 
 header div {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   justify-content: center;
   gap: 10%;
@@ -27,15 +25,13 @@ header div {
 header a {
   text-decoration: none;
   color: inherit;
-  /* z-index: 10; */
-  /* position: relative; */
 }
 
 .programming {
   width: 100%;
   position: absolute;
   top: 0;
-  right:0;
+  right: 0;
   z-index: 1;
   object-fit: cover;
   height: 550px;
@@ -45,24 +41,18 @@ header a {
 .title {
   text-align: center;
   padding-top: 200px;
-   z-index: 10;
-   position:relative;
-}
-
-.title-inner {
-  /* background-image: url("fv.jpg"); */
-  /* height: 50vh; */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
+  z-index: 10;
+  position: relative;
 }
 
 .title h1 {
   padding-bottom: 30px;
 }
 
-.title h2{
-font-weight: normal;
+.title h2 {
+  font-weight: normal;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* work */
@@ -81,14 +71,16 @@ font-weight: normal;
   gap: 16px;
 }
 
-#works a {
+#works nav {
   width: calc((100% - 32px) / 3);
-  display: block;
 }
 
 #works img {
   width: 100%;
-  display: block;
+}
+
+#works p {
+  padding-bottom: 16px;
 }
 
 /* skill */
@@ -113,13 +105,15 @@ font-weight: normal;
 #skill img {
   margin: 0 auto;
   display: block;
-  height: 110px;
-  width: 110px;
+  height: auto;
+  width: 100%;
+  max-width: 110px;
 }
 
 #skill nav:nth-child(1) img {
-  height: 110px;
-  width: 150px;
+  height: auto;
+  width: 100%;
+  max-width: 150px;
 }
 
 #skill span {
@@ -129,7 +123,7 @@ font-weight: normal;
 }
 
 #skill p {
-  padding: 30px 30px 0;
+  padding: 30px 0 0;
 }
 
 /* about */
@@ -140,6 +134,7 @@ font-weight: normal;
 
 #about img {
   width: calc(100% / 2);
+  object-fit: cover;
 }
 
 #about div {
@@ -160,13 +155,13 @@ font-weight: normal;
 #about a {
   /* text-align: center; */
   display: block;
-  width: fit-content; 
-  margin:0 auto;
+  width: fit-content;
+  margin: 0 auto;
   padding: 12px 60px;
- border:1px solid black;
+  border: 1px solid black;
   text-decoration: none;
   border-radius: 5px;
-  color:inherit;
+  color: inherit;
   position: relative;
 }
 
@@ -241,12 +236,12 @@ small {
   display: block;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 900px) {
   #works div {
     flex-direction: column;
   }
 
-  #works a {
+  #works nav {
     width: 100%;
   }
 
@@ -264,7 +259,7 @@ small {
 
   #about img {
     width: 100%;
-    height:200px;
+    aspect-ratio: 16/11;
   }
 
   #contact {
@@ -275,9 +270,9 @@ small {
     order: 2;
   }
 
-#contact nav {
-  flex-direction: column;
-}
+  #contact nav {
+    flex-direction: column;
+  }
 
   .smartphone {
     order: 1;
